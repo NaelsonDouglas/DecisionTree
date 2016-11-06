@@ -5,6 +5,7 @@ public class Node {
 	private Node yes;
 	private Node no;
 	private String caput;
+	boolean leaf;
 	
 	public void setYes(Node yesNode){
 		yes = yesNode;
@@ -22,17 +23,20 @@ public class Node {
 
 	
 	
-	public Node(Node yes, Node no, String caput) {
+	public Node(Node yes, Node no, String caput,boolean leaf) {
 		super();
 		this.yes = yes;
 		this.no = no;
 		this.caput = caput;
 	}
 	
-	public Node(String caput) {		
+	
+	
+	public Node(String caput, boolean leaf) {		
 		this.caput = caput;
 		this.yes = null;
 		this.no = null;
+		this.leaf = leaf;
 	}
 	
 
@@ -46,6 +50,10 @@ public class Node {
 
 	public String getCaput() {
 		return caput;
+	}
+
+	public boolean isLeaf() {
+		return leaf;
 	}
 	
 
